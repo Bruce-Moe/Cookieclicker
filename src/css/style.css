@@ -82,7 +82,7 @@ p {
 
 /*Pointer image*/
 .pointer {
- width: 25px;
+ width: 30px;
  height: 40px;
  margin-top: -5px;
 }
@@ -94,7 +94,7 @@ p {
 
 /*Farm image*/
 .farm {
-  width: 25px;
+  width: 30px;
   height: 50px;
   margin-top: -1px;
 }
