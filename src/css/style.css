@@ -1,0 +1,152 @@
+/* Body Background Color */
+body {
+  -webkit-animation: colorchange 60s infinite;
+  animation: colorchange 60s infinite; 
+}
+
+@-webkit-keyframes colorchange {
+  0% {background: #36FF56;}
+  25% {background: #25DDE8;}
+  50% {background: #D8E825;}
+  75% {background: #293FFF;}
+  100% {background: #FFCC52;}
+} 
+
+@keyframes colorchange {
+  0% {background: #36FF56;}
+  25% {background: #25DDE8;}
+  50% {background: #D8E825;}
+  75% {background: #293FFF;}
+  100% {background: #FFCC52;}
+}
+
+/*Cookie Image*/
+img {
+  text-align: center;
+  height: 15%;
+  width: 15%;
+  margin-top: 1rem;
+  -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
+	-webkit-transition: all 0.5s linear;
+	-o-transition: all 0.5s linear;
+	transition: all 0.5s linear;
+}
+
+/*Cookie Hover*/
+img:hover {
+  -webkit-filter: drop-shadow(0px 0px 8px black);
+  transform: scale(1.15, 1.15);
+  -ms-transform: scale(1.15, 1.15); /* IE 9 */
+  -webkit-transform: scale(1.15, 1.15);
+}
+
+/*Score Text*/
+.score {
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+/*P-tag font-size and font-samily*/
+p {
+  font-size: 2.5rem;
+  font-family: 'Roboto Slab', serif;
+}
+
+/*Cookie-div Margin*/
+.cookie {
+  margin-top: 1.25rem;
+}
+
+/*Cookie image margin*/
+.cookiepic {
+  margin-top: 0.5rem;
+}
+
+/*Margin*/
+.margin {
+  margin-top: 0.5rem;
+}
+
+/*Font resize*/
+.resize {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  text-decoration: underline;
+}
+
+/*Font resize2*/
+.resize2 {
+  font-size: 1rem;
+}
+
+/*Pointer image*/
+.pointer {
+ width: 25px;
+ height: 40px;
+ margin-top: -5px;
+}
+
+/*Autoclick button*/
+.autoclick {
+  height: 60px;
+}
+
+/*Farm image*/
+.farm {
+  width: 25px;
+  height: 50px;
+  margin-top: -1px;
+}
+
+/*Italicize text*/
+.italic {
+  font-style: italic;
+}
+
+/*Persecond text margin*/
+.persecond {
+  margin-top: 2rem;
+}
+
+/*Responsive Design Element*/
+@media screen and (max-width: 768px) {
+  img {
+    width: 7.5rem;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width:1024px) {
+  img {
+    width: 13rem;
+  }
+  p {
+    font-size: 5rem;
+  }
+  .resize2 {
+    font-size: 3rem;
+  }
+  .score {
+    font-size: 3rem;
+  }
+  .btn {
+    height: 3rem;
+    width: 5rem;
+  }
+  .farm {
+    height: 6rem;
+    width: 4rem;
+  }
+  .pointer {
+    height: 5.5rem;
+    width: 4rem;
+  }
+  .resize {
+    font-size: 3rem;
+  }
+  .autoclick {
+    height: 6rem;
+  }
+}
+
+
