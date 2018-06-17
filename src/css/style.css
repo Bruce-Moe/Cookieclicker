@@ -134,6 +134,10 @@ hr {
   margin-top: 1rem;
 }
 
+audio {
+  display:none;
+}
+
 /*Responsive Design Elements*/
 
 @media screen and (max-width: 374px) {
@@ -182,13 +186,14 @@ hr {
     font-size: 5rem;
   }
   .resize {
-    font-size: 3rem;
-  }
-  .resize2 {
     font-size: 2.5rem;
   }
-  .resize3 {
+  .resize2 {
     font-size: 2rem;
+  }
+  .resize3 {
+    font-size: 1.5rem;
+    font-weight: bold;
   }
   .score {
     font-size: 3rem;
@@ -198,18 +203,18 @@ hr {
     height: 3.5rem;
   }
   .farm {
-    height: 6rem;
-    width: 4rem;
-    margin-left: -1.08rem;
+    height: 4rem;
+    width: 2.5rem;
+    margin-left: -0.25rem;
   }
   .pointer {
-    height: 5.5rem;
-    width: 4rem;
-    margin-left: -1.08rem;
+    height: 4rem;
+    width: 2.5rem;
+    margin-left: -0.25rem;
   }
   .autoclick {
-    height: 6rem;
-    margin-left: 0.35rem;
+    height: 4.5rem;
+    margin-left: -0.1rem;
   }
 }
 
