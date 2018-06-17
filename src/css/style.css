@@ -134,8 +134,28 @@ hr {
   margin-top: 1rem;
 }
 
-/*Responsive Design Element*/
-@media screen and (max-width: 768px) {
+/*Responsive Design Elements*/
+
+@media screen and (max-width: 374px) {
+  .autoclick {
+    margin-left: -0.7rem;
+  }
+  img {
+    width: 12rem;
+  }
+  p {
+    font-size: 3rem;
+  }
+  .resize {
+    margin-top: -0.25rem;
+  }
+  .resize3 {
+    font-size: 0.9rem;
+    font-weight: bold;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767px) {
   img {
     width: 12rem;
   }
@@ -143,10 +163,14 @@ hr {
     font-size: 3rem;
   }
   .autoclick {
-    margin-left: -0.4rem;
+    margin-left: -0.53rem;
   }
   .resize {
     margin-top: -0.25rem;
+  }
+  .resize3 {
+    font-size: 0.9rem;
+    font-weight: bold;
   }
 }
 
@@ -176,12 +200,12 @@ hr {
   .farm {
     height: 6rem;
     width: 4rem;
-    margin-left: -1rem;
+    margin-left: -1.08rem;
   }
   .pointer {
     height: 5.5rem;
     width: 4rem;
-    margin-left: -1rem;
+    margin-left: -1.08rem;
   }
   .autoclick {
     height: 6rem;
