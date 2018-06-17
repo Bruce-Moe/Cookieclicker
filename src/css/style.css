@@ -23,8 +23,8 @@ body {
 /*Cookie Image*/
 img {
   text-align: center;
-  height: 15%;
-  width: 15%;
+  height: 25%;
+  width: 25%;
   margin-top: 1rem;
   -webkit-filter: drop-shadow(0px 0px 0px rgba(255,255,255,0.80));
 	-webkit-transition: all 0.5s linear;
@@ -49,7 +49,7 @@ img:hover {
 
 /*P-tag font-size and font-samily*/
 p {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   font-family: 'Roboto Slab', serif;
 }
 
@@ -68,16 +68,21 @@ p {
   margin-top: 0.5rem;
 }
 
-/*Font resize*/
+/*Upgrades Text Resize*/
 .resize {
-  font-size: 1.5rem;
-  margin-top: 1.5rem;
+  font-size: 2rem;
+  margin-top: 0.75rem;
   text-decoration: underline;
 }
 
-/*Font resize2*/
+/*Cookies Per/s Text Resize*/
 .resize2 {
-  font-size: 1rem;
+  font-size: 1.5rem;
+}
+
+/*Buy/Cost/Own Upgrade Text Resize*/
+.resize3 {
+  font-size: 1.25rem;
 }
 
 /*Pointer image*/
@@ -90,12 +95,13 @@ p {
 /*Autoclick button*/
 .autoclick {
   height: 60px;
+  width: 50px;
 }
 
 /*Farm image*/
 .farm {
   width: 30px;
-  height: 50px;
+  height: 45px;
   margin-top: -1px;
 }
 
@@ -109,10 +115,38 @@ p {
   margin-top: 2rem;
 }
 
+/*Save and Load Buttons width/margin*/
+.btn {
+  width: 5rem;
+  margin-bottom: 0.75rem;
+}
+
+/*Horizontal Divider*/
+hr {
+  height: 30px; 
+  /* Set the hr color */
+  color: #000000; /* old IE */
+  background-color: #000000; /* Modern Browsers */
+}
+
+/*Top margin to farm upgrade*/
+.topmargin {
+  margin-top: 1rem;
+}
+
 /*Responsive Design Element*/
 @media screen and (max-width: 768px) {
   img {
-    width: 7.5rem;
+    width: 12rem;
+  }
+  p {
+    font-size: 3rem;
+  }
+  .autoclick {
+    margin-left: -0.4rem;
+  }
+  .resize {
+    margin-top: -0.25rem;
   }
 }
 
@@ -123,29 +157,35 @@ p {
   p {
     font-size: 5rem;
   }
-  .resize2 {
+  .resize {
     font-size: 3rem;
+  }
+  .resize2 {
+    font-size: 2.5rem;
+  }
+  .resize3 {
+    font-size: 2rem;
   }
   .score {
     font-size: 3rem;
   }
   .btn {
-    height: 3rem;
-    width: 5rem;
+    width: 8rem;
+    height: 3.5rem;
   }
   .farm {
     height: 6rem;
     width: 4rem;
+    margin-left: -1rem;
   }
   .pointer {
     height: 5.5rem;
     width: 4rem;
-  }
-  .resize {
-    font-size: 3rem;
+    margin-left: -1rem;
   }
   .autoclick {
     height: 6rem;
+    margin-left: 0.35rem;
   }
 }
 
