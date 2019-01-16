@@ -24,9 +24,9 @@ function update() {
   var amountfarms_div = document.getElementsByClassName("amountFarms")[0];
   amountfarms_div.innerHTML = "You Own " + farms + " Farms";
   var costfarms_div = document.getElementsByClassName("costFarm")[0];
-  costfarms_div.innerHTML= "Cost " + ((farms+1) * 15) + " Cookies";
+  costfarms_div.innerHTML= "Cost " + ((farms+1) * 45) + " Cookies";
   var cookiespersec_div = document.getElementsByClassName("persecond")[0];
-  cookiespersec_div.innerHTML= "You are gaining " + (((autoclick)+(farms*2))*multiplier) + " Cookies per/s";
+  cookiespersec_div.innerHTML= "You are gaining " + (((autoclick)+(farms*5))*multiplier) + " Cookies per/s";
 }
 
 //multiplier variable
@@ -35,8 +35,8 @@ var multiplier = 1;
 //timer function
 function timer() {
   score = score + autoclick;
-  update()
-  score = score + farms*2;
+  score = score + farms*5;
+  update();
 }
   setInterval(timer, 1000);
 
@@ -78,8 +78,8 @@ function load() {
 
 //Buy farm function
 function buyFarm() {
-  if (score >= ((farms+1)*15)) {
-    score = score - ((farms+1)*15);
+  if (score >= ((farms+1)*45)) {
+    score = score - ((farms+1)*45);
     farms = farms + 1;
     update();
   }
