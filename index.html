@@ -1,17 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!--Title-->
     <title>Cookie Clicker</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+
   </head>
+
   <body>
+
     <div class="container text-center">
       <div class="row">
         <!--Cookie Clicker header and Cookie image/audio-->
@@ -22,17 +27,20 @@
             <audio id="audio" src="src/imgs/zapsplat_multimedia_click_001_19367.mp3" ></audio>
           </div>
         </div>
+
         <!--Cookies per second counter-->
         <div class="col-12">
           <div class="cookiespersecond">
             <p class="resize2 persecond">You are gaining 0 Cookies per/s</p>
           </div>
         </div>
+
         <!--Score counter-->
         <div class="col-12">
           <div class="score">Score: </div>
         </div>
       </div>
+
       <div class="row">
         <!--Save and Load buttons-->
         <div class="col-12 margin">
@@ -40,17 +48,23 @@
             <button type="button" class="btn btn-dark" onClick="load()">Load</button>
         </div>
       </div>
+
       <hr>
+
       <div class="row">
         <!--Upgrades-->
         <div class="col-12">
           <p class="resize">Upgrades</p>
         </div>
+      </div>
+
+      <div class="row">
         <!--Autoclicker upgrade-->
         <div class="col-5">
           <p class="resize3 italic">Buy 1 Autoclicker-</p>
           <p class="resize3 italic">1 Cookie/Second Each</p>
         </div>
+
         <!--Buy autoclicker button-->
         <div class="col-2">
             <button class="autoclick" onClick="buyAutoClick()"><img src="src/imgs/pointer.jpg" class="pointer"></button>
@@ -68,17 +82,22 @@
           <p class="resize3 italic">Buy 1 Farm-</p>
           <p class="resize3 italic">5 Cookie/Second Each</p>
         </div>
+
         <!--Buy farm button-->
         <div class="col-2 topmargin">
           <button class="autoclick" onClick="buyFarm()"><img src="src/imgs/farm.png" class="farm"></button>
         </div>
+
         <!--Cost/Amount farms-->
         <div class="col-5 topmargin">
           <p class="costFarm resize3">Cost 45 Cookies</p>
           <p class="amountFarms resize3">You Own 0 Farms</p>
         </div>
       </div>
+
     </div>
+
     <script src="src/js/main.js"></script>
+
   </body>
-  </html>
+</html>
