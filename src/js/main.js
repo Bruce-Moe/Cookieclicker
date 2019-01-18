@@ -19,16 +19,12 @@ function update() {
   costfarms_div.innerHTML= "Cost " + ((clickers[1]+1) * costMult[1]) + " Cookies";
 
   var cookiespersec_div = document.getElementsByClassName("persecond")[0];
-  cookiespersec_div.innerHTML= "You are gaining " + (((clickers[0]*scoreMult[0])+(clickers[1]*scoreMult[1]))*multiplier) + " Cookies per/s";
+  cookiespersec_div.innerHTML= "You are gaining " + scorePerSecond() + " Cookies per/s";
 }
-
-//multiplier variable
-var multiplier = 1;
 
 //timer function
 function timer() {
-  score = score + clickers[0]*scoreMult[0];
-  score = score + clickers[1]*scoreMult[1];
+  score += scorePerSecond();
   update();
 }
 
@@ -53,8 +49,9 @@ init(); // Call the init function
 //save function
 function save() {
   localStorage.setItem("score", score);
-  localStorage.setItem("autoclick", clickers[0]);
-  localStorage.setItem("farms", clickers[1]);
+
+  for( i = 0; i < clickers.length; i++ )
+    localStorage.setItem(i, clickers[i]);
 }
 
 //load function
@@ -66,11 +63,19 @@ function load() {
   var score_div = document.getElementsByClassName('score')[0];
   score_div.innerHTML = 'Score: ' + score; // Update the score in the DOM
 
-  clickers[0] = localStorage.getItem("autoclick");
-  clickers[0] = parseInt(clickers[0]);
+  for( i = 0; i < clickers.length; i++ )
+    clickers[i] = parseInt(localStorage.getItem(i));
+}
 
-  clickers[1] = localStorage.getItem("farms");
-  clickers[1] = parseInt(clickers[1]);
+function scorePerSecond( ) {
+  
+  var tot = 0;
+
+  for( i = 0; i < clickers.length; i++ )
+    tot += clickers[i] * scoreMult[i];
+
+  return tot;
+
 }
 
 function buy( index ) {
