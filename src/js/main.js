@@ -1,9 +1,9 @@
 var score = 0; // Define global variable to hold score
 
-var clickerNames = ["Autoclickers", "Farms"];
-var clickers = [0, 0]; 
-var costMult = [12, 45];
-var scoreMult = [1, 5];
+var clickerNames = ["Autoclickers", "Farms", "Factories"];
+var clickers = [0, 0, 0]; 
+var costMult = [12, 45, 175];
+var scoreMult = [1, 5, 20];
 
 //Update index.html text elements function
 function update() {
@@ -63,8 +63,13 @@ function load() {
   var score_div = document.getElementsByClassName('score')[0];
   score_div.innerHTML = 'Score: ' + score; // Update the score in the DOM
 
-  for( i = 0; i < clickers.length; i++ )
+  for( i = 0; i < clickers.length; i++ ) {
     clickers[i] = parseInt(localStorage.getItem(i));
+    
+    //In case of errors, set to zero
+    if ( clickers[i] === NaN )
+      clickers[i] = 0;
+  }
 }
 
 function scorePerSecond( ) {
