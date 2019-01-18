@@ -1,5 +1,7 @@
 var score = 0; // Define global variable to hold score
-var clickers = [0, 0]; //Autoclick, farm
+
+var clickerNames = ["Autoclickers", "Farms"];
+var clickers = [0, 0]; 
 var costMult = [12, 45];
 var scoreMult = [1, 5];
 
@@ -8,15 +10,13 @@ function update() {
   var score_div = document.getElementsByClassName('score')[0];
   score_div.innerHTML = 'Score: ' + score; // Update the score in the DOM
 
-  var amount_div = document.getElementsByClassName('amountAutoClick')[0];
-  amount_div.innerHTML= "You Own " + clickers[0] + " Autoclickers";
-  var cost_div = document.getElementsByClassName('CostAutoClick')[0];
-  cost_div.innerHTML= "Cost " + ((clickers[0]+1) * costMult[0]) + " Cookies";
+  for( i = 0; i < clickers.length; i++ ) {
+    var amount_div = document.getElementsByClassName("amountClickers")[i];
+    amount_div.innerHTML = "You Own " + clickers[i] + " " + clickerNames[i];
 
-  var amountfarms_div = document.getElementsByClassName("amountFarms")[0];
-  amountfarms_div.innerHTML = "You Own " + clickers[1] + " Farms";
-  var costfarms_div = document.getElementsByClassName("costFarm")[0];
-  costfarms_div.innerHTML= "Cost " + ((clickers[1]+1) * costMult[1]) + " Cookies";
+    var cost_div = document.getElementsByClassName("costClickers")[i];
+    cost_div.innerHTML = "Cost " + ( ( clickers[i] + 1 ) * costMult[i] )+ " " + " Cookies";
+  }
 
   var cookiespersec_div = document.getElementsByClassName("persecond")[0];
   cookiespersec_div.innerHTML= "You are gaining " + scorePerSecond() + " Cookies per/s";
