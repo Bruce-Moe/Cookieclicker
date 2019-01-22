@@ -1,38 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <!--Title-->
     <title>Cookie Clicker</title>
     <link rel="stylesheet" href="src/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Slab" rel="stylesheet">
+
   </head>
+
   <body>
+
     <div class="container text-center">
       <div class="row">
         <!--Cookie Clicker header and Cookie image/audio-->
         <div class="col-12">
           <div class="cookie">
             <p>Cookie Clicker</p>
-            <img class="cookiepic" src="src/imgs/Cookie.png" alt="cookie">
-            <audio id="audio" src="src/imgs/zapsplat_multimedia_click_001_19367.mp3" ></audio>
+            <img class="cookiepic" src="resources/Cookie.png" alt="cookie">
+            <audio id="audio" src="resources/zapsplat_multimedia_click_001_19367.mp3" ></audio>
           </div>
         </div>
+
         <!--Cookies per second counter-->
         <div class="col-12">
           <div class="cookiespersecond">
             <p class="resize2 persecond">You are gaining 0 Cookies per/s</p>
           </div>
         </div>
+
         <!--Score counter-->
         <div class="col-12">
           <div class="score">Score: </div>
         </div>
       </div>
+
       <div class="row">
         <!--Save and Load buttons-->
         <div class="col-12 margin">
@@ -40,42 +48,75 @@
             <button type="button" class="btn btn-dark" onClick="load()">Load</button>
         </div>
       </div>
+
       <hr>
+
       <div class="row">
         <!--Upgrades-->
         <div class="col-12">
           <p class="resize">Upgrades</p>
         </div>
+      </div>
+
+      <div class="row">
         <!--Autoclicker upgrade-->
         <div class="col-5">
           <p class="resize3 italic">Buy 1 Autoclicker-</p>
+          <p class="resize3 italic">1 Cookie/Second Each</p>
         </div>
+
         <!--Buy autoclicker button-->
         <div class="col-2">
-            <button class="autoclick" onClick="buyAutoClick()"><img src="src/imgs/pointer.jpg" class="pointer"></button>
+            <button class="iconBackground" onClick="buy(0)"><img src="resources/pointer.png" class="icon"></button>
         </div>
-        <!--Cost/Amount autoclickers-->
+        <!--Cost/Amount autoclickers initial values-->
         <div class="col-5">
-          <p class="CostAutoClick resize3"> Cost 12 Cookies</p>
-          <p class="amountAutoClick resize3">You Own 0 Autoclickers</p>
+          <p class="costClickers resize3"> Cost 12 Cookies</p>
+          <p class="amountClickers resize3">You Own 0 Autoclickers</p>
         </div>
       </div>
+
       <div class="row">
         <!--Farm upgrade-->
         <div class="col-5 topmargin">
           <p class="resize3 italic">Buy 1 Farm-</p>
+          <p class="resize3 italic">5 Cookie/Second Each</p>
         </div>
+
         <!--Buy farm button-->
         <div class="col-2 topmargin">
-          <button class="autoclick" onClick="buyFarm()"><img src="src/imgs/farm.png" class="farm"></button>
+          <button class="iconBackground" onClick="buy(1)"><img src="resources/farm.png" class="icon"></button>
         </div>
-        <!--Cost/Amount farms-->
+
+        <!--Cost/Amount farms initial values-->
         <div class="col-5 topmargin">
-          <p class="costFarm resize3">Cost 15 Cookies</p>
-          <p class="amountFarms resize3">You Own 0 Farms</p>
+          <p class="costClickers resize3">Cost 45 Cookies</p>
+          <p class="amountClickers resize3">You Own 0 Farms</p>
         </div>
       </div>
+
+      <div class="row">
+        <!--Factory upgrade-->
+        <div class="col-5 topmargin">
+          <p class="resize3 italic">Buy 1 Factory-</p>
+          <p class="resize3 italic">20 Cookie/Second Each</p>
+        </div>
+
+        <!--Buy factory button-->
+        <div class="col-2 topmargin">
+          <button class="iconBackground" onClick="buy(2)"><img src="resources/factory.png" class="icon"></button>
+        </div>
+
+        <!--Cost/Amount factory initial values-->
+        <div class="col-5 topmargin">
+          <p class="costClickers resize3">Cost 175 Cookies</p>
+          <p class="amountClickers resize3">You Own 0 Factories</p>
+        </div>
+      </div>
+
     </div>
+
     <script src="src/js/main.js"></script>
+
   </body>
-  </html>
+</html>

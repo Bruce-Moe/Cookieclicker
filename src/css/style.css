@@ -85,24 +85,17 @@ p {
   font-size: 1.25rem;
 }
 
-/*Pointer image*/
-.pointer {
+/*Clicker icons*/
+.icon {
  width: 30px;
  height: 40px;
  margin-top: -5px;
 }
 
-/*Autoclick button*/
-.autoclick {
+/*Background around each icon*/
+.iconBackground {
   height: 60px;
   width: 50px;
-}
-
-/*Farm image*/
-.farm {
-  width: 30px;
-  height: 45px;
-  margin-top: -1px;
 }
 
 /*Italicize text*/
